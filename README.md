@@ -1,11 +1,13 @@
 # ReFinder
 
-Add useful items to Finder's main menu
+Add useful items to Finder's main menu. Requires [MacForge](https://www.macenhance.com/macforge.html)
 
 ![refinder](https://github.com/MTACS/ReFinder/blob/main/Assets/refinder.png)
 
 ## Install
 
-git clone 
+```git clone https://github.com/MTACS/ReFinder.git && xcodebuild clean build```
 
-Requires [MacForge](https://www.macenhance.com/macforge.html)
+Note: Finder may need to be manually relaunched after fresh install
+
+
