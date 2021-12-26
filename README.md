@@ -1,2 +1,4 @@
 # ReFinder
-ReFinder MacForge Plugin Source
+ReFinder
+
+Requires [MacForge](https://www.macenhance.com/macforge.html)
