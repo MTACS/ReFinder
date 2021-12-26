@@ -40,6 +40,9 @@ NSMutableDictionary *finderDictionary;
     [reFinderSubMenu addItem:[NSMenuItem separatorItem]];
     [[reFinderSubMenu addItemWithTitle:@"Show Hidden Files" action:@selector(showHidden) keyEquivalent:@""] setTarget:plugin];
     [[reFinderSubMenu addItemWithTitle:@"Hide Hidden Files" action:@selector(hideHidden) keyEquivalent:@""] setTarget:plugin];
+    [reFinderSubMenu addItem:[NSMenuItem separatorItem]];
+    [[reFinderSubMenu addItemWithTitle:@"Show Desktop Icons" action:@selector(showDesktopIcons) keyEquivalent:@""] setTarget:plugin];
+    [[reFinderSubMenu addItemWithTitle:@"Hide Desktop Icons" action:@selector(hideDesktopIcons) keyEquivalent:@""] setTarget:plugin];
     
     NSMenuItem *reFinderItem = [[NSMenuItem alloc] initWithTitle:@"ReFinder" action:nil keyEquivalent:@""];
     
@@ -56,6 +59,18 @@ NSMutableDictionary *finderDictionary;
 - (void)hideHidden {
     finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
     [finderDictionary setValue:[NSNumber numberWithBool:0] forKey:@"AppleShowAllFiles"];
+    [defaults setPersistentDomain:finderDictionary forName:@"com.apple.finder"];
+    [plugin restartFinder];
+}
+- (void)showDesktopIcons {
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    [finderDictionary setValue:[NSNumber numberWithBool:1] forKey:@"CreateDesktop"];
+    [defaults setPersistentDomain:finderDictionary forName:@"com.apple.finder"];
+    [plugin restartFinder];
+}
+- (void)hideDesktopIcons {
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    [finderDictionary setValue:[NSNumber numberWithBool:0] forKey:@"CreateDesktop"];
     [defaults setPersistentDomain:finderDictionary forName:@"com.apple.finder"];
     [plugin restartFinder];
 }
@@ -84,3 +99,5 @@ ZKSwizzleInterface(rf_AboutController, TAboutWindowController, NSWindowControlle
     [field setStringValue:[NSString stringWithFormat:@"%@\n\nReFinder 1.0 © MTAC", field.stringValue]];
 }
 @end
+
+
