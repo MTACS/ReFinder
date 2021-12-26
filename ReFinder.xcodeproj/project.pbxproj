@@ -13,6 +13,8 @@
 		1709F9662778AD8A00C35A97 /* ReFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9652778AD8A00C35A97 /* ReFinder.m */; };
 		1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9692778AD8A00C35A97 /* ZKSwizzle.m */; };
 		1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */; };
+		17FA6E7A2779202D009C6D1B /* show.sh in Resources */ = {isa = PBXBuildFile; fileRef = 17FA6E792779202D009C6D1B /* show.sh */; };
+		17FA6E7C27792047009C6D1B /* hide.sh in Resources */ = {isa = PBXBuildFile; fileRef = 17FA6E7B27792047009C6D1B /* hide.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		1709F9682778AD8A00C35A97 /* ZKSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
 		1709F9692778AD8A00C35A97 /* ZKSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
 		1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		17FA6E792779202D009C6D1B /* show.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = show.sh; sourceTree = "<group>"; };
+		17FA6E7B27792047009C6D1B /* hide.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = hide.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		1709F9602778AD8A00C35A97 /* ReFinder */ = {
 			isa = PBXGroup;
 			children = (
+				17FA6E7827791F7D009C6D1B /* Scripts */,
 				1709F9642778AD8A00C35A97 /* ReFinder.h */,
 				1709F9652778AD8A00C35A97 /* ReFinder.m */,
 				1709F9672778AD8A00C35A97 /* ZKSwizzle */,
@@ -93,6 +98,15 @@
 				1709F9692778AD8A00C35A97 /* ZKSwizzle.m */,
 			);
 			path = ZKSwizzle;
+			sourceTree = "<group>";
+		};
+		17FA6E7827791F7D009C6D1B /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				17FA6E792779202D009C6D1B /* show.sh */,
+				17FA6E7B27792047009C6D1B /* hide.sh */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +165,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FA6E7A2779202D009C6D1B /* show.sh in Resources */,
 				1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */,
+				17FA6E7C27792047009C6D1B /* hide.sh in Resources */,
 				1709F9632778AD8A00C35A97 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
