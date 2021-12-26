@@ -1,4 +1,11 @@
 # ReFinder
-ReFinder
 
-Requires [MacForge](https://www.macenhance.com/macforge.html), does not work on M1 MacBooks
+Add useful items to Finder's main menu
+
+![refinder]()
+
+## Install
+
+git clone 
+
+Requires [MacForge](https://www.macenhance.com/macforge.html)
