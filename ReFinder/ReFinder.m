@@ -9,6 +9,8 @@
 #import "ReFinder.h"
 
 ReFinder *plugin;
+NSUserDefaults *defaults;
+NSMutableDictionary *finderDictionary;
 
 @implementation ReFinder
 + (instancetype)sharedInstance {
@@ -19,12 +21,43 @@ ReFinder *plugin;
     return plugin;
 }
 + (void)load {
+    defaults = [NSUserDefaults standardUserDefaults];
     plugin = [ReFinder sharedInstance];
+    
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    
+    for (NSString *key in [finderDictionary allKeys]) {
+        NSLog(@"[REFINDER] : Key/Value -> %@, %@", key, [finderDictionary objectForKey:key]);
+    }
+    
     NSUInteger osx_ver = [[NSProcessInfo processInfo] operatingSystemVersion].minorVersion;
     NSLog(@"[REFINDER] : %@ loaded into %@ on macOS 10.%ld", [plugin class], [[NSBundle mainBundle] bundleIdentifier], (long)osx_ver);
+    
     NSMenu *mainFinderMenu = [[[[NSApp mainMenu] itemArray] firstObject] submenu];
+    
+    NSMenu *reFinderSubMenu = [[NSMenu alloc] initWithTitle:@"ReFinder"];
+    [[reFinderSubMenu addItemWithTitle:@"Restart Finder" action:@selector(restartFinder) keyEquivalent:@""] setTarget:plugin];
+    [reFinderSubMenu addItem:[NSMenuItem separatorItem]];
+    [[reFinderSubMenu addItemWithTitle:@"Show Hidden Files" action:@selector(showHidden) keyEquivalent:@""] setTarget:plugin];
+    [[reFinderSubMenu addItemWithTitle:@"Hide Hidden Files" action:@selector(hideHidden) keyEquivalent:@""] setTarget:plugin];
+    
+    NSMenuItem *reFinderItem = [[NSMenuItem alloc] initWithTitle:@"ReFinder" action:nil keyEquivalent:@""];
+    
     [mainFinderMenu addItem:[NSMenuItem separatorItem]];
-    [[mainFinderMenu addItemWithTitle:@"Restart Finder" action:@selector(restartFinder) keyEquivalent:@""] setTarget:plugin];
+    [mainFinderMenu addItem:reFinderItem];
+    [mainFinderMenu setSubmenu:reFinderSubMenu forItem:reFinderItem];
+}
+- (void)showHidden {
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    [finderDictionary setValue:[NSNumber numberWithBool:1] forKey:@"AppleShowAllFiles"];
+    [defaults setPersistentDomain:finderDictionary forName:@"com.apple.finder"];
+    [plugin restartFinder];
+}
+- (void)hideHidden {
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    [finderDictionary setValue:[NSNumber numberWithBool:0] forKey:@"AppleShowAllFiles"];
+    [defaults setPersistentDomain:finderDictionary forName:@"com.apple.finder"];
+    [plugin restartFinder];
 }
 
 // https://github.com/w0lfschild/podcastsPlus/blob/182809f07326f5364954addc47ccd0dd8e83d6de/podcastsPlus/podcastsPlus.m#L424
