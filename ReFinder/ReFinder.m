@@ -23,8 +23,16 @@ NSMutableDictionary *finderDictionary;
 + (void)load {
     defaults = [NSUserDefaults standardUserDefaults];
     plugin = [ReFinder sharedInstance];
+    
+    finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
+    
+    for (NSString *key in [finderDictionary allKeys]) {
+        NSLog(@"[REFINDER] : Key/Value -> %@, %@", key, [finderDictionary objectForKey:key]);
+    }
+    
     NSUInteger osx_ver = [[NSProcessInfo processInfo] operatingSystemVersion].minorVersion;
     NSLog(@"[REFINDER] : %@ loaded into %@ on macOS 10.%ld", [plugin class], [[NSBundle mainBundle] bundleIdentifier], (long)osx_ver);
+    
     NSMenu *mainFinderMenu = [[[[NSApp mainMenu] itemArray] firstObject] submenu];
     
     NSMenu *reFinderSubMenu = [[NSMenu alloc] initWithTitle:@"ReFinder"];
