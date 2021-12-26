@@ -2,7 +2,7 @@
 
 Add useful items to Finder's main menu
 
-![refinder]()
+![refinder](https://github.com/MTACS/ReFinder/blob/main/Assets/refinder.png)
 
 ## Install
 
