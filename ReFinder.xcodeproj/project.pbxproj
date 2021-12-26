@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1709F95D2778AD8A00C35A97 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1709F95C2778AD8A00C35A97 /* AppKit.framework */; };
+		1709F95F2778AD8A00C35A97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1709F95E2778AD8A00C35A97 /* Foundation.framework */; };
+		1709F9632778AD8A00C35A97 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1709F9622778AD8A00C35A97 /* Info.plist */; };
+		1709F9662778AD8A00C35A97 /* ReFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9652778AD8A00C35A97 /* ReFinder.m */; };
+		1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9692778AD8A00C35A97 /* ZKSwizzle.m */; };
+		1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1709F9592778AD8A00C35A97 /* ReFinder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReFinder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1709F95C2778AD8A00C35A97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1709F95E2778AD8A00C35A97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1709F9622778AD8A00C35A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		1709F9642778AD8A00C35A97 /* ReFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinder.h; sourceTree = "<group>"; };
+		1709F9652778AD8A00C35A97 /* ReFinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinder.m; sourceTree = "<group>"; };
+		1709F9682778AD8A00C35A97 /* ZKSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
+		1709F9692778AD8A00C35A97 /* ZKSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
+		1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1709F9562778AD8A00C35A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1709F95D2778AD8A00C35A97 /* AppKit.framework in Frameworks */,
+				1709F95F2778AD8A00C35A97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1709F9502778AD8A00C35A97 = {
+			isa = PBXGroup;
+			children = (
+				1709F9602778AD8A00C35A97 /* ReFinder */,
+				1709F95B2778AD8A00C35A97 /* Frameworks */,
+				1709F95A2778AD8A00C35A97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1709F95A2778AD8A00C35A97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1709F9592778AD8A00C35A97 /* ReFinder.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1709F95B2778AD8A00C35A97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1709F95C2778AD8A00C35A97 /* AppKit.framework */,
+				1709F95E2778AD8A00C35A97 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1709F9602778AD8A00C35A97 /* ReFinder */ = {
+			isa = PBXGroup;
+			children = (
+				1709F9642778AD8A00C35A97 /* ReFinder.h */,
+				1709F9652778AD8A00C35A97 /* ReFinder.m */,
+				1709F9672778AD8A00C35A97 /* ZKSwizzle */,
+				1709F9612778AD8A00C35A97 /* Supporting Files */,
+			);
+			path = ReFinder;
+			sourceTree = "<group>";
+		};
+		1709F9612778AD8A00C35A97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1709F9622778AD8A00C35A97 /* Info.plist */,
+				1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1709F9672778AD8A00C35A97 /* ZKSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				1709F9682778AD8A00C35A97 /* ZKSwizzle.h */,
+				1709F9692778AD8A00C35A97 /* ZKSwizzle.m */,
+			);
+			path = ZKSwizzle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1709F9582778AD8A00C35A97 /* ReFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1709F96F2778AD8A00C35A97 /* Build configuration list for PBXNativeTarget "ReFinder" */;
+			buildPhases = (
+				1709F9552778AD8A00C35A97 /* Sources */,
+				1709F9562778AD8A00C35A97 /* Frameworks */,
+				1709F9572778AD8A00C35A97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReFinder;
+			productName = ReFinder;
+			productReference = 1709F9592778AD8A00C35A97 /* ReFinder.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1709F9512778AD8A00C35A97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					1709F9582778AD8A00C35A97 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 1709F9542778AD8A00C35A97 /* Build configuration list for PBXProject "ReFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1709F9502778AD8A00C35A97;
+			productRefGroup = 1709F95A2778AD8A00C35A97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1709F9582778AD8A00C35A97 /* ReFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1709F9572778AD8A00C35A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */,
+				1709F9632778AD8A00C35A97 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1709F9552778AD8A00C35A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1709F9662778AD8A00C35A97 /* ReFinder.m in Sources */,
+				1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1709F96D2778AD8A00C35A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		1709F96E2778AD8A00C35A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+			};
+			name = Release;
+		};
+		1709F9702778AD8A00C35A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = 7ML54VJYG9;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReFinder/PrefixHeader.pch;
+				INFOPLIST_FILE = ReFinder/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1709F9712778AD8A00C35A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = 7ML54VJYG9;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReFinder/PrefixHeader.pch;
+				INFOPLIST_FILE = ReFinder/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1709F9542778AD8A00C35A97 /* Build configuration list for PBXProject "ReFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1709F96D2778AD8A00C35A97 /* Debug */,
+				1709F96E2778AD8A00C35A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1709F96F2778AD8A00C35A97 /* Build configuration list for PBXNativeTarget "ReFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1709F9702778AD8A00C35A97 /* Debug */,
+				1709F9712778AD8A00C35A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1709F9512778AD8A00C35A97 /* Project object */;
+}
