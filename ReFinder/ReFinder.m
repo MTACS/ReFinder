@@ -32,78 +32,78 @@ static NSDictionary *preferencesDict = nil;
     
     NSLog(@"[REFINDER] : %@ loaded into %@ on macOS %ld.%ld", [plugin class], [[NSBundle mainBundle] bundleIdentifier], (long)osx_ver_maj, (long)osx_ver_min);
     
-    NSMenu *mainFinderMenu = [[[[NSApp mainMenu] itemArray] firstObject] submenu];
+    NSMenuItem *reFinderItem = [[NSMenuItem alloc] init];
+    [reFinderItem setTitle:@"ReFinder"];
     
+    NSMenu *mainFinderMenu = [[[[NSApp mainMenu] itemArray] firstObject] submenu];
+    [mainFinderMenu addItem:[NSMenuItem separatorItem]];
+    [mainFinderMenu addItem:reFinderItem];
+    [mainFinderMenu setSubmenu:[plugin reFinderMenu] forItem:reFinderItem];
+}
+- (NSMenu *)reFinderMenu {
     NSMenu *reFinderSubMenu = [[NSMenu alloc] initWithTitle:@"ReFinder"];
     NSMenuItem *restartItem = [[NSMenuItem alloc] init];
     [restartItem setTitle:@"Restart Finder"];
-    [restartItem setKeyEquivalent:@""];
     [restartItem setTarget:plugin];
     [restartItem setAction:@selector(restartFinder)];
     [reFinderSubMenu addItem:restartItem];
     
+    
+    NSMenuItem *restartDockItem = [[NSMenuItem alloc] init];
+    [restartDockItem setTarget:plugin];
+    [restartDockItem setAction:@selector(restartDock)];
+    [restartDockItem setTitle:@"Restart Dock"];
+    [reFinderSubMenu addItem:restartDockItem];
     [reFinderSubMenu addItem:[NSMenuItem separatorItem]];
     
-    NSMenu *reFinderTools = [[NSMenu alloc] initWithTitle:@"Tools"];
     
     NSMenuItem *toggleHiddenItem = [[NSMenuItem alloc] init];
     [toggleHiddenItem setTarget:plugin];
     [toggleHiddenItem setAction:@selector(toggleHidden:)];
-    [toggleHiddenItem setKeyEquivalent:@""];
     if ([plugin hiddenFilesAreShown]) {
         [toggleHiddenItem setTitle:@"Hide Hidden Files"];
     } else {
         [toggleHiddenItem setTitle:@"Show Hidden Files"];
     }
-    [reFinderTools addItem:toggleHiddenItem];
-    
-    [reFinderTools addItem:[NSMenuItem separatorItem]];
+    [reFinderSubMenu addItem:toggleHiddenItem];
     
     NSMenuItem *toggleDesktopItem = [[NSMenuItem alloc] init];
     [toggleDesktopItem setTarget:plugin];
     [toggleDesktopItem setAction:@selector(toggleDesktop:)];
-    [toggleDesktopItem setKeyEquivalent:@""];
     if ([plugin desktopIconsAreShown]) {
         [toggleDesktopItem setTitle:@"Hide Desktop Icons"];
     } else {
         [toggleDesktopItem setTitle:@"Show Desktop Icons"];
     }
-    [reFinderTools addItem:toggleDesktopItem];
-    
-    NSMenuItem *reFinderItem = [[NSMenuItem alloc] initWithTitle:@"ReFinder" action:nil keyEquivalent:@""];
-    
-    NSMenuItem *reFinderToolsItem = [[NSMenuItem alloc] initWithTitle:@"Tools" action:nil keyEquivalent:@""];
-    [reFinderSubMenu addItem:reFinderToolsItem];
-    [mainFinderMenu setSubmenu:reFinderTools forItem:reFinderToolsItem];
-    
-    [mainFinderMenu addItem:[NSMenuItem separatorItem]];
-    [mainFinderMenu addItem:reFinderItem];
-    [mainFinderMenu setSubmenu:reFinderSubMenu forItem:reFinderItem];
-    
+    [reFinderSubMenu addItem:toggleDesktopItem];
     [reFinderSubMenu addItem:[NSMenuItem separatorItem]];
     
+    
     [[reFinderSubMenu addItemWithTitle:@"Preferences" action:@selector(showPreferences) keyEquivalent:@""] setTarget:plugin];
+    
+    return reFinderSubMenu;
 }
 - (void)loadSections {
     finderDictionary = [[defaults persistentDomainForName:@"com.apple.finder"] mutableCopy];
     NSMenu *mainFinderMenu = [NSApp mainMenu];
+    NSLog(@"[REFINDER] : %@", mainFinderMenu.itemArray);
     for (NSMenuItem *item in mainFinderMenu.itemArray) { // Feels like it could be done cleaner
-        if ([[finderDictionary objectForKey:@"hideFileItem"] boolValue] == 1 && [item.title isEqualToString:@"File"]) {
+        if ([[finderDictionary objectForKey:@"hideFileItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 1) {
             [item setHidden:YES];
         }
-        if ([[finderDictionary objectForKey:@"hideEditItem"] boolValue] == 1 && [item.title isEqualToString:@"Edit"]) {
+        if ([[finderDictionary objectForKey:@"hideEditItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 2) {
             [item setHidden:YES];
         }
-        if ([[finderDictionary objectForKey:@"hideViewItem"] boolValue] == 1 && [item.title isEqualToString:@"View"]) {
+        if ([[finderDictionary objectForKey:@"hideViewItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 3) {
             [item setHidden:YES];
         }
-        if ([[finderDictionary objectForKey:@"hideGoItem"] boolValue] == 1 && [item.title isEqualToString:@"Go"]) {
+        if ([[finderDictionary objectForKey:@"hideGoItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 4) {
             [item setHidden:YES];
         }
-        if ([[finderDictionary objectForKey:@"hideWindowItem"] boolValue] == 1 && [item.title isEqualToString:@"Window"]) {
+        if ([[finderDictionary objectForKey:@"hideWindowItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 5) {
             [item setHidden:YES];
         }
-        if ([[finderDictionary objectForKey:@"hideHelpItem"] boolValue] == 1 && [item.title isEqualToString:@"Help"]) {
+        if ([[finderDictionary objectForKey:@"hideHelpItem"] boolValue] == 1 && [mainFinderMenu.itemArray indexOfObject:item] == 6) {
             [item setHidden:YES];
         }
     }
@@ -156,7 +156,7 @@ static NSDictionary *preferencesDict = nil;
 // https://github.com/w0lfschild/podcastsPlus/blob/182809f07326f5364954addc47ccd0dd8e83d6de/podcastsPlus/podcastsPlus.m#L424
 
 - (void)restartFinder {
-    NSLog(@"[REFINDER] : Relaunching");
+    NSLog(@"[REFINDER] : Relaunching Finder");
     float seconds = 1.0;
     NSTask *task = [[NSTask alloc] init];
     NSMutableArray *args = [NSMutableArray array];
@@ -166,6 +166,14 @@ static NSDictionary *preferencesDict = nil;
     [task setArguments:args];
     [task launch];
     [NSApp terminate:nil];
+}
+- (void)restartDock {
+    NSLog(@"[REFINDER] : Relaunching Dock");
+    NSTask *task = [[NSTask alloc] init];
+    NSArray *args = [NSArray arrayWithObjects:@"-c", @"killall Dock", nil];
+    [task setLaunchPath:@"/bin/sh"];
+    [task setArguments:args];
+    [task launch];
 }
 - (void)openSourceCode {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/MTACS/ReFinder"]];
@@ -184,8 +192,22 @@ ZKSwizzleInterface(rf_AboutController, TAboutWindowController, NSWindowControlle
 - (void)windowDidLoad {
     ZKOrig(void);
     NSTextField *field = (NSTextField *)[self.window.contentView.subviews lastObject];
-    [field setStringValue:[NSString stringWithFormat:@"%@\n\nReFinder 1.1 © MTAC", field.stringValue]];
+    [field setStringValue:[NSString stringWithFormat:@"%@\n\nReFinder 1.2 © MTAC", field.stringValue]];
 }
 @end
 
-
+ZKSwizzleInterface(rf_TApplicationController, TApplicationController, NSResponder)
+@implementation rf_TApplicationController
+- (id)applicationDockMenu:(id)arg1 {
+    NSMenu *dockMenu = ZKOrig(id, arg1);
+    
+    NSMenuItem *reFinderItem = [[NSMenuItem alloc] init];
+    [reFinderItem setTitle:@"ReFinder"];
+    
+    [dockMenu addItem:[NSMenuItem separatorItem]];
+    [dockMenu addItem:reFinderItem];
+    [dockMenu setSubmenu:[plugin reFinderMenu] forItem:reFinderItem];
+    
+    return dockMenu;
+}
+@end

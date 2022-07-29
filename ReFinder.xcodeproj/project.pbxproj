@@ -14,8 +14,8 @@
 		1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9692778AD8A00C35A97 /* ZKSwizzle.m */; };
 		1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */; };
 		1741270E27795BB20020949D /* ReFinderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1741270D27795BB20020949D /* ReFinderWindow.m */; };
+		1756C98A277E68540026AF1F /* ReFinderPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */; };
 		17FA6E8027794186009C6D1B /* ReFinderPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */; };
-		17FA6E8127794186009C6D1B /* ReFinderPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FA6E7F27794186009C6D1B /* ReFinderPreferencesController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		1741270C27795BB20020949D /* ReFinderWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinderWindow.h; sourceTree = "<group>"; };
 		1741270D27795BB20020949D /* ReFinderWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinderWindow.m; sourceTree = "<group>"; };
+		1756C993277E69E10026AF1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ReFinderPreferencesController.xib; sourceTree = "<group>"; };
 		17FA6E7D27794186009C6D1B /* ReFinderPreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinderPreferencesController.h; sourceTree = "<group>"; };
 		17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinderPreferencesController.m; sourceTree = "<group>"; };
-		17FA6E7F27794186009C6D1B /* ReFinderPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReFinderPreferencesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +77,13 @@
 		1709F9602778AD8A00C35A97 /* ReFinder */ = {
 			isa = PBXGroup;
 			children = (
-				1709F9642778AD8A00C35A97 /* ReFinder.h */,
-				1709F9652778AD8A00C35A97 /* ReFinder.m */,
 				1709F9672778AD8A00C35A97 /* ZKSwizzle */,
 				1709F9612778AD8A00C35A97 /* Supporting Files */,
+				1709F9642778AD8A00C35A97 /* ReFinder.h */,
+				1709F9652778AD8A00C35A97 /* ReFinder.m */,
 				17FA6E7D27794186009C6D1B /* ReFinderPreferencesController.h */,
 				17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */,
-				17FA6E7F27794186009C6D1B /* ReFinderPreferencesController.xib */,
+				1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */,
 				1741270C27795BB20020949D /* ReFinderWindow.h */,
 				1741270D27795BB20020949D /* ReFinderWindow.m */,
 			);
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */,
-				17FA6E8127794186009C6D1B /* ReFinderPreferencesController.xib in Resources */,
+				1756C98A277E68540026AF1F /* ReFinderPreferencesController.xib in Resources */,
 				1709F9632778AD8A00C35A97 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +185,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1756C993277E69E10026AF1F /* en */,
+			);
+			name = ReFinderPreferencesController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1709F96D2778AD8A00C35A97 /* Debug */ = {
@@ -310,7 +321,7 @@
 				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
@@ -333,7 +344,7 @@
 				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;

@@ -9,7 +9,6 @@
 #import "ReFinder.h"
 
 @interface ReFinderWindow : NSWindow
-@property (strong) IBOutlet NSSwitch *compactSwitch;
 @property (strong) IBOutlet NSSwitch *fileSwitch;
 @property (strong) IBOutlet NSSwitch *editSwitch;
 @property (strong) IBOutlet NSSwitch *viewSwitch;

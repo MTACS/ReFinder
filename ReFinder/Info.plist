@@ -22,6 +22,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>DevURL</key>
+	<string>https://github.com/MTACS/ReFinder</string>
 	<key>NSPrincipalClass</key>
 	<string>ReFinder</string>
 	<key>SIMBLTargetApplications</key>
@@ -29,10 +31,6 @@
 		<dict>
 			<key>BundleIdentifier</key>
 			<string>com.apple.finder</string>
-		</dict>
-		<dict>
-			<key>BundleIdentifier</key>
-			<string>com.apple.dock</string>
 		</dict>
 	</array>
 </dict>

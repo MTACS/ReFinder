@@ -22,7 +22,6 @@ static NSUserDefaults *preferences = nil;
             [preferences setInteger:0 forKey:prefsKey];
         }
     }
-    [self.compactSwitch setState:(NSControlStateValue)[preferences integerForKey:@"useCompactMenu"]];
     [self.fileSwitch setState:(NSControlStateValue)[preferences integerForKey:@"hideFileItem"]];
     [self.editSwitch setState:(NSControlStateValue)[preferences integerForKey:@"hideEditItem"]];
     [self.viewSwitch setState:(NSControlStateValue)[preferences integerForKey:@"hideViewItem"]];

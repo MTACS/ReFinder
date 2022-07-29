@@ -13,8 +13,10 @@
 #import "ZKSwizzle/ZKSwizzle.h"
 #import "ReFinderPreferencesController.h"
 
-@interface ReFinder : NSObject // <NSUserInterfaceValidations>
+@interface ReFinder : NSObject
 + (instancetype)sharedInstance;
+- (NSMenu *)reFinderMenu;
 - (void)restartFinder;
+- (void)restartDock;
 - (void)openSourceCode;
 @end
