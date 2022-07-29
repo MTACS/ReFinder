@@ -2,7 +2,8 @@
 
 Add useful items to Finder's main menu. Requires [MacForge](https://www.macenhance.com/macforge.html)
 
-![options](https://github.com/MTACS/ReFinder/blob/main/Assets/ReFinderOptions.png)
+![menu](https://github.com/MTACS/ReFinder/blob/main/Assets/submenu.png)
+![dockmenu](https://github.com/MTACS/ReFinder/blob/main/Assets/menu.png)
 ![prefs](https://github.com/MTACS/ReFinder/blob/main/Assets/ReFinderPreferences.png)
 
 ## Install
