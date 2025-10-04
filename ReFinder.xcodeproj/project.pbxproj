@@ -3,45 +3,58 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1709F95D2778AD8A00C35A97 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1709F95C2778AD8A00C35A97 /* AppKit.framework */; };
-		1709F95F2778AD8A00C35A97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1709F95E2778AD8A00C35A97 /* Foundation.framework */; };
-		1709F9632778AD8A00C35A97 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1709F9622778AD8A00C35A97 /* Info.plist */; };
-		1709F9662778AD8A00C35A97 /* ReFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9652778AD8A00C35A97 /* ReFinder.m */; };
-		1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1709F9692778AD8A00C35A97 /* ZKSwizzle.m */; };
-		1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */; };
-		1741270E27795BB20020949D /* ReFinderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1741270D27795BB20020949D /* ReFinderWindow.m */; };
-		1756C98A277E68540026AF1F /* ReFinderPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */; };
-		17FA6E8027794186009C6D1B /* ReFinderPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */; };
+		1772C4102D7539C300C847A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3DF2D7532D500C847A6 /* main.m */; };
+		1772C4112D7539C800C847A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1772C3DD2D7532D500C847A6 /* Main.storyboard */; };
+		1772C4122D7539CE00C847A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3E02D7532D500C847A6 /* AppDelegate.m */; };
+		1772C4132D7539D200C847A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1772C3EA2D7532D500C847A6 /* Info.plist */; };
+		1772C4142D7539E200C847A6 /* RFSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3D72D7532D500C847A6 /* RFSplitView.m */; };
+		1772C4152D7539E500C847A6 /* RFTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3D82D7532D500C847A6 /* RFTableRowView.m */; };
+		1772C4162D7539E800C847A6 /* RFSidebarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3D92D7532D500C847A6 /* RFSidebarCell.m */; };
+		1772C4172D7539EC00C847A6 /* RFSidebarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1772C3D22D7532D500C847A6 /* RFSidebarCell.xib */; };
+		1772C4182D7539EF00C847A6 /* RFWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3DA2D7532D500C847A6 /* RFWindow.m */; };
+		1772C4192D7539F200C847A6 /* RFWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3E62D7532D500C847A6 /* RFWindowController.m */; };
+		1772C41A2D7539F400C847A6 /* RFSidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3E72D7532D500C847A6 /* RFSidebarController.m */; };
+		1772C41B2D7539F700C847A6 /* RFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1772C3E82D7532D500C847A6 /* RFController.m */; };
+		1772C41D2D75494B00C847A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1772C3DC2D7532D500C847A6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1709F9592778AD8A00C35A97 /* ReFinder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReFinder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1709F95C2778AD8A00C35A97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1709F95E2778AD8A00C35A97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		1709F9622778AD8A00C35A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		1709F9642778AD8A00C35A97 /* ReFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinder.h; sourceTree = "<group>"; };
-		1709F9652778AD8A00C35A97 /* ReFinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinder.m; sourceTree = "<group>"; };
-		1709F9682778AD8A00C35A97 /* ZKSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
-		1709F9692778AD8A00C35A97 /* ZKSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
-		1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
-		1741270C27795BB20020949D /* ReFinderWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinderWindow.h; sourceTree = "<group>"; };
-		1741270D27795BB20020949D /* ReFinderWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinderWindow.m; sourceTree = "<group>"; };
-		1756C993277E69E10026AF1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ReFinderPreferencesController.xib; sourceTree = "<group>"; };
-		17FA6E7D27794186009C6D1B /* ReFinderPreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReFinderPreferencesController.h; sourceTree = "<group>"; };
-		17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReFinderPreferencesController.m; sourceTree = "<group>"; };
+		1772C3D02D7532D500C847A6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1772C3D22D7532D500C847A6 /* RFSidebarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFSidebarCell.xib; sourceTree = "<group>"; };
+		1772C3D32D7532D500C847A6 /* RFSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSplitView.h; sourceTree = "<group>"; };
+		1772C3D42D7532D500C847A6 /* RFTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTableRowView.h; sourceTree = "<group>"; };
+		1772C3D52D7532D500C847A6 /* RFSidebarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSidebarCell.h; sourceTree = "<group>"; };
+		1772C3D62D7532D500C847A6 /* RFWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWindow.h; sourceTree = "<group>"; };
+		1772C3D72D7532D500C847A6 /* RFSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSplitView.m; sourceTree = "<group>"; };
+		1772C3D82D7532D500C847A6 /* RFTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTableRowView.m; sourceTree = "<group>"; };
+		1772C3D92D7532D500C847A6 /* RFSidebarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSidebarCell.m; sourceTree = "<group>"; };
+		1772C3DA2D7532D500C847A6 /* RFWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWindow.m; sourceTree = "<group>"; };
+		1772C3DB2D7532D500C847A6 /* ReFinderApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ReFinderApp.entitlements; sourceTree = "<group>"; };
+		1772C3DC2D7532D500C847A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1772C3DE2D7532D500C847A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1772C3DF2D7532D500C847A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1772C3E02D7532D500C847A6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1772C3E22D7532D500C847A6 /* RFWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWindowController.h; sourceTree = "<group>"; };
+		1772C3E32D7532D500C847A6 /* RFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFController.h; sourceTree = "<group>"; };
+		1772C3E52D7532D500C847A6 /* RFSidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSidebarController.h; sourceTree = "<group>"; };
+		1772C3E62D7532D500C847A6 /* RFWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWindowController.m; sourceTree = "<group>"; };
+		1772C3E72D7532D500C847A6 /* RFSidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSidebarController.m; sourceTree = "<group>"; };
+		1772C3E82D7532D500C847A6 /* RFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFController.m; sourceTree = "<group>"; };
+		1772C3EA2D7532D500C847A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1772C3FD2D75351900C847A6 /* ReFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1709F9562778AD8A00C35A97 /* Frameworks */ = {
+		1772C3FA2D75351900C847A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1709F95D2778AD8A00C35A97 /* AppKit.framework in Frameworks */,
-				1709F95F2778AD8A00C35A97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +64,7 @@
 		1709F9502778AD8A00C35A97 = {
 			isa = PBXGroup;
 			children = (
-				1709F9602778AD8A00C35A97 /* ReFinder */,
+				1772C3FE2D75351900C847A6 /* ReFinderApp */,
 				1709F95B2778AD8A00C35A97 /* Frameworks */,
 				1709F95A2778AD8A00C35A97 /* Products */,
 			);
@@ -60,7 +73,7 @@
 		1709F95A2778AD8A00C35A97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1709F9592778AD8A00C35A97 /* ReFinder.bundle */,
+				1772C3FD2D75351900C847A6 /* ReFinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,59 +87,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1709F9602778AD8A00C35A97 /* ReFinder */ = {
+		1772C3D12D7532D500C847A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1709F9672778AD8A00C35A97 /* ZKSwizzle */,
-				1709F9612778AD8A00C35A97 /* Supporting Files */,
-				1709F9642778AD8A00C35A97 /* ReFinder.h */,
-				1709F9652778AD8A00C35A97 /* ReFinder.m */,
-				17FA6E7D27794186009C6D1B /* ReFinderPreferencesController.h */,
-				17FA6E7E27794186009C6D1B /* ReFinderPreferencesController.m */,
-				1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */,
-				1741270C27795BB20020949D /* ReFinderWindow.h */,
-				1741270D27795BB20020949D /* ReFinderWindow.m */,
+				1772C3D32D7532D500C847A6 /* RFSplitView.h */,
+				1772C3D72D7532D500C847A6 /* RFSplitView.m */,
+				1772C3D42D7532D500C847A6 /* RFTableRowView.h */,
+				1772C3D82D7532D500C847A6 /* RFTableRowView.m */,
+				1772C3D52D7532D500C847A6 /* RFSidebarCell.h */,
+				1772C3D92D7532D500C847A6 /* RFSidebarCell.m */,
+				1772C3D22D7532D500C847A6 /* RFSidebarCell.xib */,
+				1772C3D62D7532D500C847A6 /* RFWindow.h */,
+				1772C3DA2D7532D500C847A6 /* RFWindow.m */,
 			);
-			path = ReFinder;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		1709F9612778AD8A00C35A97 /* Supporting Files */ = {
+		1772C3E12D7532D500C847A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1709F9622778AD8A00C35A97 /* Info.plist */,
-				1709F96B2778AD8A00C35A97 /* PrefixHeader.pch */,
+				1772C3E22D7532D500C847A6 /* RFWindowController.h */,
+				1772C3E62D7532D500C847A6 /* RFWindowController.m */,
+				1772C3E52D7532D500C847A6 /* RFSidebarController.h */,
+				1772C3E72D7532D500C847A6 /* RFSidebarController.m */,
+				1772C3E32D7532D500C847A6 /* RFController.h */,
+				1772C3E82D7532D500C847A6 /* RFController.m */,
 			);
-			path = "Supporting Files";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1709F9672778AD8A00C35A97 /* ZKSwizzle */ = {
+		1772C3FE2D75351900C847A6 /* ReFinderApp */ = {
 			isa = PBXGroup;
 			children = (
-				1709F9682778AD8A00C35A97 /* ZKSwizzle.h */,
-				1709F9692778AD8A00C35A97 /* ZKSwizzle.m */,
+				1772C3D12D7532D500C847A6 /* Classes */,
+				1772C3E12D7532D500C847A6 /* Controllers */,
+				1772C3DB2D7532D500C847A6 /* ReFinderApp.entitlements */,
+				1772C3DC2D7532D500C847A6 /* Assets.xcassets */,
+				1772C3DD2D7532D500C847A6 /* Main.storyboard */,
+				1772C3DF2D7532D500C847A6 /* main.m */,
+				1772C3D02D7532D500C847A6 /* AppDelegate.h */,
+				1772C3E02D7532D500C847A6 /* AppDelegate.m */,
+				1772C3EA2D7532D500C847A6 /* Info.plist */,
 			);
-			path = ZKSwizzle;
+			path = ReFinderApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1709F9582778AD8A00C35A97 /* ReFinder */ = {
+		1772C3FC2D75351900C847A6 /* ReFinderApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1709F96F2778AD8A00C35A97 /* Build configuration list for PBXNativeTarget "ReFinder" */;
+			buildConfigurationList = 1772C40D2D75351900C847A6 /* Build configuration list for PBXNativeTarget "ReFinderApp" */;
 			buildPhases = (
-				1709F9552778AD8A00C35A97 /* Sources */,
-				1709F9562778AD8A00C35A97 /* Frameworks */,
-				1709F9572778AD8A00C35A97 /* Resources */,
+				1772C3F92D75351900C847A6 /* Sources */,
+				1772C3FA2D75351900C847A6 /* Frameworks */,
+				1772C3FB2D75351900C847A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReFinder;
-			productName = ReFinder;
-			productReference = 1709F9592778AD8A00C35A97 /* ReFinder.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = ReFinderApp;
+			productName = refinderapp;
+			productReference = 1772C3FD2D75351900C847A6 /* ReFinder.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -134,10 +158,11 @@
 		1709F9512778AD8A00C35A97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					1709F9582778AD8A00C35A97 = {
-						CreatedOnToolsVersion = 12.5.1;
+					1772C3FC2D75351900C847A6 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -148,51 +173,58 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 1709F9502778AD8A00C35A97;
 			productRefGroup = 1709F95A2778AD8A00C35A97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1709F9582778AD8A00C35A97 /* ReFinder */,
+				1772C3FC2D75351900C847A6 /* ReFinderApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1709F9572778AD8A00C35A97 /* Resources */ = {
+		1772C3FB2D75351900C847A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1709F96C2778AD8A00C35A97 /* PrefixHeader.pch in Resources */,
-				1756C98A277E68540026AF1F /* ReFinderPreferencesController.xib in Resources */,
-				1709F9632778AD8A00C35A97 /* Info.plist in Resources */,
+				1772C4132D7539D200C847A6 /* Info.plist in Resources */,
+				1772C4172D7539EC00C847A6 /* RFSidebarCell.xib in Resources */,
+				1772C41D2D75494B00C847A6 /* Assets.xcassets in Resources */,
+				1772C4112D7539C800C847A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1709F9552778AD8A00C35A97 /* Sources */ = {
+		1772C3F92D75351900C847A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1709F9662778AD8A00C35A97 /* ReFinder.m in Sources */,
-				1709F96A2778AD8A00C35A97 /* ZKSwizzle.m in Sources */,
-				1741270E27795BB20020949D /* ReFinderWindow.m in Sources */,
-				17FA6E8027794186009C6D1B /* ReFinderPreferencesController.m in Sources */,
+				1772C4192D7539F200C847A6 /* RFWindowController.m in Sources */,
+				1772C4162D7539E800C847A6 /* RFSidebarCell.m in Sources */,
+				1772C4182D7539EF00C847A6 /* RFWindow.m in Sources */,
+				1772C4122D7539CE00C847A6 /* AppDelegate.m in Sources */,
+				1772C4102D7539C300C847A6 /* main.m in Sources */,
+				1772C41B2D7539F700C847A6 /* RFController.m in Sources */,
+				1772C4152D7539E500C847A6 /* RFTableRowView.m in Sources */,
+				1772C41A2D7539F400C847A6 /* RFSidebarController.m in Sources */,
+				1772C4142D7539E200C847A6 /* RFSplitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1756C98C277E68540026AF1F /* ReFinderPreferencesController.xib */ = {
+		1772C3DD2D7532D500C847A6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1756C993277E69E10026AF1F /* en */,
+				1772C3DE2D7532D500C847A6 /* Base */,
 			);
-			name = ReFinderPreferencesController.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -201,7 +233,12 @@
 		1709F96D2778AD8A00C35A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -209,6 +246,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_TIDY_BUGPRONE_INFINITE_LOOP = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -232,9 +270,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -249,16 +288,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ReFinder;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Debug;
 		};
 		1709F96E2778AD8A00C35A97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -266,6 +311,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_TIDY_BUGPRONE_INFINITE_LOOP = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -289,6 +335,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -300,54 +347,76 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ReFinder;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Release;
 		};
-		1709F9702778AD8A00C35A97 /* Debug */ = {
+		1772C40E2D75351900C847A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = ReFinderApp/ReFinderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = 7ML54VJYG9;
-				DSTROOT = /;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ReFinder/PrefixHeader.pch;
-				INFOPLIST_FILE = ReFinder/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
-				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReFinderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReFinder;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2025 © D.F. (MTAC)";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.refinder;
+				PRODUCT_NAME = ReFinder;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
-		1709F9712778AD8A00C35A97 /* Release */ = {
+		1772C40F2D75351900C847A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = ReFinderApp/ReFinderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = 7ML54VJYG9;
-				DSTROOT = /;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ReFinder/PrefixHeader.pch;
-				INFOPLIST_FILE = ReFinder/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
-				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.ReFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReFinderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReFinder;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2025 © D.F. (MTAC)";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtac.refinder;
+				PRODUCT_NAME = ReFinder;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -363,11 +432,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1709F96F2778AD8A00C35A97 /* Build configuration list for PBXNativeTarget "ReFinder" */ = {
+		1772C40D2D75351900C847A6 /* Build configuration list for PBXNativeTarget "ReFinderApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1709F9702778AD8A00C35A97 /* Debug */,
-				1709F9712778AD8A00C35A97 /* Release */,
+				1772C40E2D75351900C847A6 /* Debug */,
+				1772C40F2D75351900C847A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
